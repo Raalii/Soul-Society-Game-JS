@@ -57,9 +57,9 @@ class BasicWorld {
     //   RotationCamera.add(this._camera.rotation, "x").min(-10).max(10).step(0.01);
     //   RotationCamera.add(this._camera.rotation, "z").min(-10).max(10).step(0.01);
 
-    //   const controls = new OrbitControls(this._camera, this._threejs.domElement);
-    //   controls.target.set(20, 0, 0);
-    //   controls.update();
+      // const controls = new OrbitControls(this._camera, this._threejs.domElement);
+      // controls.target.set(20, 0, 0);
+      // controls.update();
 
     // We init a scene to render the elements
     this._scene = new THREE.Scene();

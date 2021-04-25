@@ -64,7 +64,8 @@ export const player = (() => {
     }
 
     CheckCollisions_() {
-      const colliders = this.params_.world.GetColliders_();
+      // Check collision 
+      const colliders = this.params_.world.GetColliders_(); 
       this.playerBox.setFromObject(this.mesh_);
       for (let c of colliders) {
         const cur = c.collider;
@@ -76,6 +77,7 @@ export const player = (() => {
     }
 
     Update(timeElapsed) {
+      // Update for the jump, whith gravity
       if (this.keys_.spacebar && this.position_.y == 0.0) {
         this.velocity_ = 30;
       }

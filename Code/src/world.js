@@ -151,15 +151,12 @@ export const world = (() => {
     Update(timeElapsed) {
       this.MaybeSpawn_();
 
-
-      const invisible = [];
       const visible = [];
 
       for (let obj of this.objects_) {
         obj.position.x += timeElapsed * this.speed_;
 
         if (obj.position.x > 20) {
-          invisible.push(obj);
           obj.mesh_.visible = false;
         } else {
           visible.push(obj);
