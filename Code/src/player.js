@@ -17,7 +17,6 @@ export const player = (() => {
       this.collider = new THREE.Box3();
       this.mesh_.castShadow = true;
       this.mesh_.receiveShadow = true;
-      this.mesh_.position.y = 0;
       this.params_.scene.add(this.mesh_);
       this.playerBox = new THREE.Box3();
       this.InitInput_();
@@ -49,6 +48,16 @@ export const player = (() => {
           this.keys_.spacebar = false;
           break;
 
+        case 37 :
+          if (this.position_.z < 6) {
+            this.position_.z += 3
+          }
+          break;
+
+        case 39:
+          if (this.position_.z > 2 ) {
+            this.position_.z -= 3
+          }
         default:
           break;
       }
