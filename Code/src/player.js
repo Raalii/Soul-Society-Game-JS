@@ -9,7 +9,7 @@ export const player = (() => {
       this.mesh_ = new THREE.Mesh(
         new THREE.BoxBufferGeometry(1, 1, 1),
         new THREE.MeshStandardMaterial({
-          color: 0x80ff80,
+          color: 0xffffff,
         })
       );
       this.params_ = params;
